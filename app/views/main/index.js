@@ -9,8 +9,6 @@ import {
 
 import { Actions } from 'react-native-router-flux';
 
-import Header from './elements/header'
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -26,7 +24,6 @@ export default class Main extends React.Component {
   render(){
     return (
         <View style={styles.container}>
-          <Header />
           <View style={styles.content} >
           </View>
         </View>

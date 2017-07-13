@@ -27,7 +27,7 @@ export default class Main extends React.Component {
 
   componentDidMount(){
     this.redirectDelay = setTimeout(
-      () => Actions.main(),
+      () => Actions.app(),
       1000
     );
   }
