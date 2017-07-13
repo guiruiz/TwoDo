@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  Slider,
   Button,
 } from 'react-native';
 
@@ -14,50 +15,41 @@ import { Actions } from 'react-native-router-flux';
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      paddingTop: 15,
-      paddingBottom: 15
+      justifyContent: "center",
+      alignItems: "center",
     },
     titleInput: {
-      marginTop: 20,
+      minWidth: 300,
+      margin: 10,
       padding: 10,
-      fontSize: 30,
+      fontSize: 20,
+      borderWidth: 1,
+      borderColor: '#eee',
+      borderStyle: 'solid'
     },
-    textInput: {
-      marginTop: 10,
-      padding: 10,
-      fontSize: 15,
-      flex:1
-    }
 })
 
 export default class Add extends React.Component {
   constructor(props){
     super(props);
 
-    this.state = { title: '', text: ''}
+    this.state = { title: ''}
     this.handleOnPress = this.handleOnPress.bind(this)
   }
 
   handleOnPress(){
-    
+
   }
 
   render(){
     return (
         <View style={styles.container}>
+
           <TextInput
             style={styles.titleInput}
             onChangeText={(title) => this.setState({title})}
             value={this.state.title}
             placeholder="Title"
-          />
-
-          <TextInput
-            style={styles.textInput}
-            onChangeText={(text) => this.setState({text})}
-            value={this.state.text}
-            multiline = {true}
-            placeholder="Text"
           />
 
           <Button color="black" title="Save" onPress={this.handleOnPress}/>
