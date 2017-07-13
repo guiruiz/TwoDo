@@ -9,7 +9,7 @@ import {
 
 import { Actions } from 'react-native-router-flux';
 
-import Header from './elements/header';
+import Header from './elements/header'
 
 const styles = StyleSheet.create({
   container: {

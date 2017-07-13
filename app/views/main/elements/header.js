@@ -28,16 +28,11 @@ const styles = StyleSheet.create({
 });
 
 export default class Header extends React.Component {
-
-  handleOnPress(){
-    //TODO: Navigate to Add scene
-  }
-
   render(){
     return (
       <View style={styles.header}>
         <Text style={styles.brand}>IIDO</Text>
-        <Button color="white" title="Add" onPress={this.handleOnPress}/>
+        <Button color="white" title="Add" onPress={Actions.add}/>
       </View>
     )
   }

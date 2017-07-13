@@ -8,11 +8,13 @@ import {
 
 import LaunchView from './app/views/launch';
 import MainView from './app/views/main';
+import AddView from './app/views/add';
 
 const scenes = Actions.create(
   <Scene key="root" hideNavBar={true}>
     <Scene key="launch" title="Launch" component={LaunchView} initial={true} />
     <Scene key="main" title="Main" component={MainView} />
+    <Scene key="add" title="Add" component={AddView} />
   </Scene>
 );
 
