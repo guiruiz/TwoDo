@@ -45,7 +45,7 @@ const scenes = Actions.create(
       <Scene key="main" title="IIDO" component={MainView}
         onRight={() => Actions.add()}
         rightTitle="Add"/>
-      <Scene key="add" title="Add ToDo" component={AddView} />
+      <Scene key="add" title="Add IIDO" component={AddView} />
     </Scene>
   </Scene>
 );
