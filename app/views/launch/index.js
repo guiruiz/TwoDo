@@ -13,13 +13,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: '#87bb7d',
   },
   brand: {
     fontSize: 50,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#e47e31'
+    color: '#ffffff'
   }
 });
 

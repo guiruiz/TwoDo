@@ -18,7 +18,7 @@ import AddView from './app/views/add';
 
 const styles = StyleSheet.create({
   navBar: {
-    backgroundColor: '#e47e31'
+    backgroundColor: '#87bb7d'
   },
   navBarTitle: {
     color: 'white',
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     color:'white'
   },
   barButtonIconStyle:{
-    tintColor:'rgb(255,255,255)'
+    tintColor:'white'
   },
 });
 
