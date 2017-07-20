@@ -12,6 +12,8 @@ import { Actions } from 'react-native-router-flux'
 
 import TaskCell from './elements/taskCell'
 
+import Task from '../../models/Task'
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -28,8 +30,8 @@ export default class Main extends React.Component {
       <View style={styles.container}>
         <FlatList
           data={[
-            {key: 1, title: 'Finish react-native project', priority: 3, priorityText: "High"},
-            {key: 2, title: 'Run for 10 minutes', priority: 1, priorityText: "Low"},
+            new Task({key: 1, title: 'Finish react-native project', priority: 3}),
+            new Task({key: 2, title: 'Run for 10 minutes', priority: 1}),
           ]}
           renderItem={({item}) => <TaskCell item={item} />}
         />
