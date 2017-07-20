@@ -13,6 +13,8 @@ import { Actions } from 'react-native-router-flux';
 
 import PriorityBar from './elements/priorityBar'
 
+import Task from '../../models/Task'
+
 const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -40,13 +42,17 @@ const styles = StyleSheet.create({
 export default class Add extends React.Component {
   constructor(props){
     super(props);
-
-    this.state = { title: ''}
+    this.state = { title: '', priority: 2 }
     this.handleOnPress = this.handleOnPress.bind(this)
   }
 
   handleOnPress(){
-
+    let task = new Task({
+      key: Math.random() * 10000,
+      title: this.state.title,
+      priority: this.state.priority
+    })
+    console.log(task.key + " - " + task.title + " - " + task.priority)
   }
 
   render(){
@@ -62,7 +68,10 @@ export default class Add extends React.Component {
               placeholderTextColor="#777"
             />
 
-            <PriorityBar />
+            <PriorityBar
+              value={this.state.priority}
+              onChange={(priority) => this.setState({priority})}
+            />
 
             <Button color="white" title="Save" onPress={this.handleOnPress}/>
           </View>

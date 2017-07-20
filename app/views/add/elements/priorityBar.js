@@ -11,6 +11,7 @@ import {
 
 import { Actions } from 'react-native-router-flux';
 
+import Task from '../../../models/Task'
 
 const styles = StyleSheet.create({
   container: {
@@ -47,25 +48,23 @@ const styles = StyleSheet.create({
 export default class PriorityBar extends React.Component {
   constructor(props){
     super(props)
-    this.state = { priority: 2, priorityText: "Medium"}
+    this.state = {
+      priority: this.props.value,
+      priorityText: this.getPriorityText(this.props.value)
+    }
     this.handleOnValueChange = this.handleOnValueChange.bind(this)
   }
 
   handleOnValueChange(value){
-    var priorityText
-    switch (value) {
-      case 1:
-        priorityText = 'Low'
-        break
-      case 2:
-        priorityText = 'Medium'
-        break
-      case 3:
-        priorityText = 'High'
-        break
-    }
+    this.setState({
+      priority: value,
+      priorityText: this.getPriorityText(value)
+    })
+    this.props.onChange(value)
+  }
 
-    this.setState({priority: value, priorityText})
+  getPriorityText(priority){
+    return new Task({priority}).priorityText
   }
 
   render(){
