@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export default class ToDoCell extends React.Component {
+export default class TaskCell extends React.Component {
   constructor(props){
     super(props)
     this.handleOnPress = this.handleOnPress.bind(this)

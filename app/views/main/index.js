@@ -10,7 +10,7 @@ import {
 
 import { Actions } from 'react-native-router-flux'
 
-import ToDoCell from './elements/toDoCell'
+import TaskCell from './elements/taskCell'
 
 const styles = StyleSheet.create({
   container: {
@@ -31,7 +31,7 @@ export default class Main extends React.Component {
             {key: 1, title: 'Finish react-native project', priority: 3, priorityText: "High"},
             {key: 2, title: 'Run for 10 minutes', priority: 1, priorityText: "Low"},
           ]}
-          renderItem={({item}) => <ToDoCell item={item} />}
+          renderItem={({item}) => <TaskCell item={item} />}
         />
       </View>
     )
